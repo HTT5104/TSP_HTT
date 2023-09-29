@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{0F2F19B8-E625-4AFC-8FA6-7884FE84A1E2}</ProjectGuid>
+    <RootNamespace>tsplib_solver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\CplexDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\CplexRelease.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>"C:\Program Files\IBM\ILOG\CPLEX_Studio2211\concert\include";"C:\Program Files\IBM\ILOG\CPLEX_Studio2211\cplex\include"</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>"C:\Program Files\IBM\ILOG\CPLEX_Studio2211\cplex\lib\x64_windows_msvc14\stat_mda";"C:\Program Files\IBM\ILOG\CPLEX_Studio2211\concert\lib\x64_windows_msvc14\stat_mda";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cplex2211.lib;ilocplex.lib;concert.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CuttingPlaneCrossing.h" />
+    <ClInclude Include="CuttingPlaneFlow.h" />
+    <ClInclude Include="CuttingPlaneSubtour.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Edge.h" />
+    <ClInclude Include="FileParser.h" />
+    <ClInclude Include="SubtourElimination.h" />
+    <ClInclude Include="MTZ.h" />
+    <ClInclude Include="TSP.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CuttingPlaneCrossing.cpp" />
+    <ClCompile Include="CuttingPlaneFlow.cpp" />
+    <ClCompile Include="CuttingPlaneSoubtour.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Edge.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="FileParser.cpp" />
+    <ClCompile Include="MTZ.cpp" />
+    <ClCompile Include="SubtourElimination.cpp" />
+    <ClCompile Include="TSP.cpp" />
+    <ClCompile Include="Vertex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\a280.opt.tour" />
+    <None Include="..\res\a280.tsp" />
+    <None Include="..\res\ali535.tsp" />
+    <None Include="..\res\att48.opt.tour" />
+    <None Include="..\res\att48.tsp" />
+    <None Include="..\res\att48_10628.tsp" />
+    <None Include="..\res\att532.tsp" />
+    <None Include="..\res\bayg29.opt.tour" />
+    <None Include="..\res\bayg29.tsp" />
+    <None Include="..\res\bays29.opt.tour" />
+    <None Include="..\res\bays29.tsp" />
+    <None Include="..\res\berlin52.opt.tour" />
+    <None Include="..\res\berlin52.tsp" />
+    <None Include="..\res\bier127.tsp" />
+    <None Include="..\res\brazil58.tsp" />
+    <None Include="..\res\brd14051.tsp" />
+    <None Include="..\res\brg180.opt.tour" />
+    <None Include="..\res\brg180.tsp" />
+    <None Include="..\res\burma14.tsp" />
+    <None Include="..\res\burma14_3323.tsp" />
+    <None Include="..\res\ch130.opt.tour" />
+    <None Include="..\res\ch130.tsp" />
+    <None Include="..\res\ch150.opt.tour" />
+    <None Include="..\res\ch150.tsp" />
+    <None Include="..\res\d1291.tsp" />
+    <None Include="..\res\d15112.tsp" />
+    <None Include="..\res\d1655.tsp" />
+    <None Include="..\res\d18512.tsp" />
+    <None Include="..\res\d198.tsp" />
+    <None Include="..\res\d2103.tsp" />
+    <None Include="..\res\d493.tsp" />
+    <None Include="..\res\d657.tsp" />
+    <None Include="..\res\dantzig42.tsp" />
+    <None Include="..\res\dsj1000.tsp" />
+    <None Include="..\res\eil101.opt.tour" />
+    <None Include="..\res\eil101.tsp" />
+    <None Include="..\res\eil51.opt.tour" />
+    <None Include="..\res\eil51.tsp" />
+    <None Include="..\res\eil51_426.tsp" />
+    <None Include="..\res\eil76.opt.tour" />
+    <None Include="..\res\eil76.tsp" />
+    <None Include="..\res\eil76_538.tsp" />
+    <None Include="..\res\fl1400.tsp" />
+    <None Include="..\res\fl1577.tsp" />
+    <None Include="..\res\fl3795.tsp" />
+    <None Include="..\res\fl417.tsp" />
+    <None Include="..\res\fnl4461.tsp" />
+    <None Include="..\res\fri26.opt.tour" />
+    <None Include="..\res\fri26.tsp" />
+    <None Include="..\res\gil262.tsp" />
+    <None Include="..\res\gr120.opt.tour" />
+    <None Include="..\res\gr120.tsp" />
+    <None Include="..\res\gr137.tsp" />
+    <None Include="..\res\gr17.tsp" />
+    <None Include="..\res\gr17_2085.tsp" />
+    <None Include="..\res\gr202.opt.tour" />
+    <None Include="..\res\gr202.tsp" />
+    <None Include="..\res\gr21.tsp" />
+    <None Include="..\res\gr229.tsp" />
+    <None Include="..\res\gr24.opt.tour" />
+    <None Include="..\res\gr24.tsp" />
+    <None Include="..\res\gr431.tsp" />
+    <None Include="..\res\gr48.opt.tour" />
+    <None Include="..\res\gr48.tsp" />
+    <None Include="..\res\gr666.opt.tour" />
+    <None Include="..\res\gr666.tsp" />
+    <None Include="..\res\gr96.opt.tour" />
+    <None Include="..\res\gr96.tsp" />
+    <None Include="..\res\hk48.tsp" />
+    <None Include="..\res\kroA100.opt.tour" />
+    <None Include="..\res\kroA100.tsp" />
+    <None Include="..\res\kroA150.tsp" />
+    <None Include="..\res\kroA200.tsp" />
+    <None Include="..\res\kroB100.tsp" />
+    <None Include="..\res\kroB150.tsp" />
+    <None Include="..\res\kroB200.tsp" />
+    <None Include="..\res\kroC100.opt.tour" />
+    <None Include="..\res\kroC100.tsp" />
+    <None Include="..\res\kroD100.opt.tour" />
+    <None Include="..\res\kroD100.tsp" />
+    <None Include="..\res\kroE100.tsp" />
+    <None Include="..\res\lin105.opt.tour" />
+    <None Include="..\res\lin105.tsp" />
+    <None Include="..\res\lin318.tsp" />
+    <None Include="..\res\linhp318.tsp" />
+    <None Include="..\res\nrw1379.tsp" />
+    <None Include="..\res\p654.tsp" />
+    <None Include="..\res\pa561.opt.tour" />
+    <None Include="..\res\pa561.tsp" />
+    <None Include="..\res\pcb1173.tsp" />
+    <None Include="..\res\pcb3038.tsp" />
+    <None Include="..\res\pcb442.opt.tour" />
+    <None Include="..\res\pcb442.tsp" />
+    <None Include="..\res\pla33810.tsp" />
+    <None Include="..\res\pla7397.tsp" />
+    <None Include="..\res\pla85900.tsp" />
+    <None Include="..\res\pr1002.opt.tour" />
+    <None Include="..\res\pr1002.tsp" />
+    <None Include="..\res\pr107.tsp" />
+    <None Include="..\res\pr124.tsp" />
+    <None Include="..\res\pr136.tsp" />
+    <None Include="..\res\pr144.tsp" />
+    <None Include="..\res\pr152.tsp" />
+    <None Include="..\res\pr226.tsp" />
+    <None Include="..\res\pr2392.opt.tour" />
+    <None Include="..\res\pr2392.tsp" />
+    <None Include="..\res\pr264.tsp" />
+    <None Include="..\res\pr299.tsp" />
+    <None Include="..\res\pr439.tsp" />
+    <None Include="..\res\pr76.opt.tour" />
+    <None Include="..\res\pr76.tsp" />
+    <None Include="..\res\rat195.tsp" />
+    <None Include="..\res\rat575.tsp" />
+    <None Include="..\res\rat783.tsp" />
+    <None Include="..\res\rat99.tsp" />
+    <None Include="..\res\rd100.opt.tour" />
+    <None Include="..\res\rd100.tsp" />
+    <None Include="..\res\rd400.tsp" />
+    <None Include="..\res\rl11849.tsp" />
+    <None Include="..\res\rl1304.tsp" />
+    <None Include="..\res\rl1323.tsp" />
+    <None Include="..\res\rl1889.tsp" />
+    <None Include="..\res\rl5915.tsp" />
+    <None Include="..\res\rl5934.tsp" />
+    <None Include="..\res\si1032.tsp" />
+    <None Include="..\res\si175.tsp" />
+    <None Include="..\res\si535.tsp" />
+    <None Include="..\res\st70.opt.tour" />
+    <None Include="..\res\st70.tsp" />
+    <None Include="..\res\st70_675.tsp" />
+    <None Include="..\res\swiss42.tsp" />
+    <None Include="..\res\ts225.tsp" />
+    <None Include="..\res\tsp225.opt.tour" />
+    <None Include="..\res\tsp225.tsp" />
+    <None Include="..\res\u1060.tsp" />
+    <None Include="..\res\u1432.tsp" />
+    <None Include="..\res\u159.tsp" />
+    <None Include="..\res\u1817.tsp" />
+    <None Include="..\res\u2152.tsp" />
+    <None Include="..\res\u2319.tsp" />
+    <None Include="..\res\u574.tsp" />
+    <None Include="..\res\u724.tsp" />
+    <None Include="..\res\ulysses16.opt.tour" />
+    <None Include="..\res\ulysses16.tsp" />
+    <None Include="..\res\ulysses16_6859.tsp" />
+    <None Include="..\res\ulysses22.opt.tour" />
+    <None Include="..\res\ulysses22.tsp" />
+    <None Include="..\res\ulysses22_7013.tsp" />
+    <None Include="..\res\usa13509.tsp" />
+    <None Include="..\res\vm1084.tsp" />
+    <None Include="..\res\vm1748.tsp" />
+    <None Include="..\res\xray.problems" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

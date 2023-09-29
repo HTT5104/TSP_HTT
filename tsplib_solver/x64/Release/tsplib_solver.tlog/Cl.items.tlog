@@ -1,0 +1,11 @@
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\CuttingPlaneCrossing.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\CuttingPlaneCrossing.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\CuttingPlaneFlow.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\CuttingPlaneFlow.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\CuttingPlaneSoubtour.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\CuttingPlaneSoubtour.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\Data.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\Data.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\Edge.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\Edge.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\main.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\main.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\FileParser.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\FileParser.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\MTZ.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\MTZ.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\SubtourElimination.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\SubtourElimination.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\TSP.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\TSP.obj
+C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\Vertex.cpp;C:\Users\ADMIN\source\repos\tsplib_solver-master\tsplib_solver\x64\Release\Vertex.obj

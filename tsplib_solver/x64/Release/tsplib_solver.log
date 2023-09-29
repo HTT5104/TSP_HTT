@@ -1,0 +1,16 @@
+﻿  CuttingPlaneCrossing.cpp
+  CuttingPlaneFlow.cpp
+  CuttingPlaneSoubtour.cpp
+  Data.cpp
+  Edge.cpp
+  main.cpp
+  FileParser.cpp
+  MTZ.cpp
+  SubtourElimination.cpp
+  TSP.cpp
+  Vertex.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1140 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  tsplib_solver.vcxproj -> C:\Users\ADMIN\source\repos\tsplib_solver-master\x64\Release\tsplib_solver.exe
